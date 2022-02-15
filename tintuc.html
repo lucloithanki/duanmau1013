@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="">
+<title>Tin Tức</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/tintuc.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        farbbibliothek = new Array();
+        farbbibliothek[0] = new Array("#FF0000", "#FF1100", "#FF2200", "#FF3300", "#FF4400", "#FF5500", "#FF6600", "#FF7700", "#FF8800", "#FF9900", "#FFaa00", "#FFbb00", "#FFcc00", "#FFdd00", "#FFee00", "#FFff00", "#FFee00", "#FFdd00", "#FFcc00", "#FFbb00", "#FFaa00", "#FF9900", "#FF8800", "#FF7700", "#FF6600", "#FF5500", "#FF4400", "#FF3300", "#FF2200", "#FF1100");
+        farbbibliothek[1] = new Array("#00FF00", "#000000", "#00FF00", "#00FF00");
+        farbbibliothek[2] = new Array("#00FF00", "#FF0000", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00", "#00FF00");
+        farbbibliothek[3] = new Array("#FF0000", "#FF4000", "#FF8000", "#FFC000", "#FFFF00", "#C0FF00", "#80FF00", "#40FF00", "#00FF00", "#00FF40", "#00FF80", "#00FFC0", "#00FFFF", "#00C0FF", "#0080FF", "#0040FF", "#0000FF", "#4000FF", "#8000FF", "#C000FF", "#FF00FF", "#FF00C0", "#FF0080", "#FF0040");
+        farbbibliothek[4] = new Array("#FF0000", "#EE0000", "#DD0000", "#CC0000", "#BB0000", "#AA0000", "#990000", "#880000", "#770000", "#660000", "#550000", "#440000", "#330000", "#220000", "#110000", "#000000", "#110000", "#220000", "#330000", "#440000", "#550000", "#660000", "#770000", "#880000", "#990000", "#AA0000", "#BB0000", "#CC0000", "#DD0000", "#EE0000");
+        farbbibliothek[5] = new Array("#000000", "#000000", "#000000", "#FFFFFF", "#FFFFFF", "#FFFFFF");
+        farbbibliothek[6] = new Array("#0000FF", "#FFFF00");
+        farben = farbbibliothek[4];
+
+        function farbschrift() {
+            for (var i = 0; i < Buchstabe.length; i++) {
+                document.all["a" + i].style.color = farben[i];
+            }
+            farbverlauf();
+        }
+
+        function string2array(text) {
+            Buchstabe = new Array();
+            while (farben.length < text.length) {
+                farben = farben.concat(farben);
+            }
+            k = 0;
+            while (k <= text.length) {
+                Buchstabe[k] = text.charAt(k);
+                k++;
+            }
+        }
+
+        function divserzeugen() {
+            for (var i = 0; i < Buchstabe.length; i++) {
+                document.write("<span id='a" + i + "' class='a" + i + "'>" + Buchstabe[i] + "<\/span>");
+            }
+            farbschrift();
+        }
+        var a = 1;
+
+        function farbverlauf() {
+            for (var i = 0; i < farben.length; i++) {
+                farben[i - 1] = farben[i];
+            }
+            farben[farben.length - 1] = farben[-1];
+
+            setTimeout("farbschrift()", 30);
+        }
+        //
+        var farbsatz = 1;
+
+        function farbtauscher() {
+            farben = farbbibliothek[farbsatz];
+            while (farben.length < text.length) {
+                farben = farben.concat(farben);
+            }
+            farbsatz = Math.floor(Math.random() * (farbbibliothek.length - 0.0001));
+        }
+        setInterval("farbtauscher()", 5000);
+
+        text = "POLY CINEMAX";
+        string2array(text);
+        divserzeugen();
+        //document.write(text);
+    </script>
+    <article id="main">
+        <section class="logo"><a href="index.html"><img src="img/logo.png" width="100%" height="auto"></a></section>
+
+        <section class="menu">
+            <ul>
+                <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                <li><a href="">Phim</a>
+                    <ul class="list-menu">
+                        <li><a href="phimdangchieu.html">Phim Sắp Chiếu</a></li>
+                        <li><a href="phimsapchieu.html">Phim Đang Chiếu</a></li>
+                        <li><a href="#">Phim Đang Sale</a></li>
+                    </ul>
+                </li>
+                <li><a href="phongve">Phòng Vé</a></li>
+                <li><a href="thanhvien.html">Thành Viên</a>
+                    <ul class="list-menu">
+                        <li><a href="dangki.html">Đăng Kí</a></li>
+                        <li><a href="dangki.html">Đăng Nhập</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Tin Tức</a></li>
+
+            </ul>
+        </section>
+        <section class="phimsapchieu">
+            <div class="tdphim">
+                <p>Tin Tức</p>
+
+            </div>
+            <div class="clear"></div>
+            <div class="top">
+                <div class="trai">
+                    <img src="img/top.jpg" alt="tin thứ nhất đọc cái ngất">
+                    <a href="">
+                        <h2>Britney Spears mải mê hôn người tình khi đưa con trai đi xem bóng rổ</h2>
+                    </a>
+                    <p>Nữ ca sĩ trông rạng rỡ hạnh phúc khi tựa đầu vào bạn trai Sam Asghari, và rất luôn luôn sử dụng hành động mạnh bạo , cư dân cộng đồng mạng dậy sống. Britney Spears đưa hai con trai Jayden và Sean tới theo dõi trận bóng rổ ở Los Angeles hôm 29/1 cùng người tình trẻ của cô, Sam Asghari. Trên hàng ghế khán giả, trong khi các con mải mê dõi theo trận thi đấu, Brit trò chuyện sôi nổi với bạn trai.Brit tựa đầu vào ngực người tình, trông cô rất hạnh phúc. Cặp đôi hẹn hò đã hơn một năm và rất hòa hợp, bất chấp việc Brit hơn Sam 13 tuổi. Trong một cuộc trò chuyện cách đây ít lâu với báo chí, Britney thổ lộ rằng cô yêu Sam vì sự "trẻ con" và đáng yêu của anh. 
+                    </p>
+                    <p><a href=""><span>Đọc luôn</span></a></p>
+                    
+                </div>
+                
+                <div class="phai">
+                    <div class="tin1">
+                        <img src="img/top1.jpg" alt="tin phải thứ 1">
+                        <a href="">
+                            <h3>Selena Gomez say đắm trong vòng tay Justin Bieber</h3>
+                        </a>
+                        <p>
+                            Selena Gomez và bạn trai Justin Bieber đã có một buổi tối ấm áp tràn đầy tại khách sạn Montage, sau khi cặp sao đi lễ nhà thờ ở Los Angeles hôm 30/11.<br>
+                            <a href=""><span>Đọc típ...</span></a>
+                        </p>
+                    </div>
+                    <div class="tin1">
+                        <img src="img/top2.jpg" alt="tin phải thứ 1">
+                        <a href="">
+                            <h3>Lady Gaga thả rông ngực, cưỡi ngựa trên bờ biển</h3>
+                        </a>
+                        <p>
+                            Trên mạng xã hội, Lady Gaga khoe triệt để đường cong cơ thể khi diện bộ áo tắm hai mảnh "kiệm vải". Bức hình được chụp trong chuyến du hý Miami của cô tuần vừa rồi. <br>
+                            <a href=""><span>Đọc típ...</span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="mid">
+                <div class="tin2">
+                    <img src="img/bot1.jpg" alt="tin giữa 1" width="95%">
+                    <a href="">
+                        <h2>Lưu Diệc Phi gây tranh cãi khi trở thành 'công chúa Disney'</h2>
+                    </a>
+                    <p>Khán giả quốc tế bàn luận trái chiều về năng lực của Diệc Phi khi đóng chính phim chuyển thể hoạt hình của Disney. Lưu Diệc Phi mới đây xác nhận đóng vai chính Hoa Mộc Lan trong phim Mulan. Điều này đồng nghĩa cô trở thành người đẹp gốc Hoa đầu tiên làm "công chúa" của hãng phim nổi tiếng.
+                    </p>
+                    <p><span><a href="">Đọc luôn...</a></span></p>
+                </div>
+                <div class="tin2">
+                    <img src="img/mid2.jpg" alt="tin giữa 1" width="95%">
+                    <a href="">
+                        <h2>Đại gia đình ra sân bay đón Nam vương Ngọc Tình lúc nửa đêm</h2>
+                    </a>
+                    <p>Ngọc Tình xuống sân bay Tân Sơn Nhất vào lúc nửa đêm qua (30/11) với chiếc cúp Manhunt International 2017 (Nam vương quốc tế). Anh đã chiến thắng nhiều ứng viên xuất sắc trong đêm chung kết cuộc thi cách đây 3 ngày tại Thái Lan.
+                    </p>
+                    <p><span><a href="">Đọc luôn...</a></span></p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="bot1">
+                <div class="tin3">
+                    <img src="img/bot2.jpg" alt="đọc tin thứ nhất ở bot">
+                    <a href="">
+                        <h3>Iron Man, Spider-Man bị đánh tơi tả trong 'Avengers: Infinity War'</h3>
+                    </a>
+                    <p>Avengers: Infinity War là tác phẩm thứ 19 trong Vũ trụ Điện ảnh Marvel, được giới thiệu là điểm hội tụ của tất cả các phim trước đó. Câu chuyện xoay quanh trận chiến của các siêu anh hùng với ác nhân Thanos. </p>
+                    <p><span><a href="">Đọc luôn ...</a></span></p>
+                </div>
+                <div class="tin3">
+                    <img src="img/bot3.jpg" alt="đọc tin thứ nhất ở bot">
+                    <a href="">
+                        <h3>Ngô Thanh Vân: 'Tôi áp lực khi diễn trong bom tấn Star Wars'</h3>
+                    </a>
+                    <p>Ngô Thanh Vân chia sẻ cảm giác vinh dự khi biết được chọn tham gia phim. Ban đầu, cô làm việc với đoàn phim thông qua công ty đại diện ở Mỹ. Diễn viên phải trải qua nhiều vòng phỏng vấn để vượt qua nhiều ứng viên.</p>
+                    <p><span><a href="">Đọc luôn ...</a></span></p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="bot">
+                <div class="tin4">
+                    <img src="img/tin4.jpg" alt="đọc tin thứ nhất ở bot">
+                    <h3><a href="">Ngọc Trinh và dàn sao dự ra mắt phim mới của Thanh Hằng</a></h3>
+                    <p>Ngọc Trinh, Thanh Hằng chọn thiết kế tôn vòng một ở buổi công chiếu phim "Mẹ chồng".</p>
+                    <p><span><a href="">Đọc luôn ...</a></span></p>
+                </div>
+                <div class="tin4">
+                    <img src="img/tin41.jpg" alt="đọc tin thứ nhất ở bot">
+                    <h3><a href="">Đạo diễn Hoàng Nhật Nam kể chuyện dàn dựng Liên hoan phim</a></h3>
+                    <p>Đạo diễn tiết lộ chuyện dàn dựng sân khấu, việc sử dụng âm thanh, ánh sáng hiện đại, các tiết mục trong lễ khai mạc và bế mạc.</p>
+                    <p><span><a href="">Đọc luôn ...</a></span></p>
+                </div>
+                <div class="tin4">
+                    <img src="img/tin42.jpg" alt="đọc tin thứ nhất ở bot">
+                    <h3><a href="">Lưu Diệc Phi sẽ hóa Hoa Mộc Lan trong phim Disney</a></h3>
+                    <p>Người đẹp sinh năm 1987 đóng chính trong "Mulan" - tác phẩm ra mắt năm 2019 dựa trên phim hoạt hình cùng tên.</p>
+                    <p><span><a href="">Đọc luôn ...</a></span></p>
+                </div>
+                <div class="tin4">
+                    <img src="img/tin43.jpg" alt="đọc tin thứ nhất ở bot">
+                    <h3><a href="">'Hồn bướm' - khát khao được xã hội công nhận của người chuyển giới</a></h3>
+                    <p>Hơn 60 phút phim tài liệu là những chia sẻ về cuộc sống khó khăn, ước mơ của nhóm người chuyển giới tại Sài Gòn.</p>
+                    <p><span><a href="">Đọc luôn ...</a></span></p>
+                </div>
+                <div class="tin4">
+                    <img src="img/tin44.jpg" alt="đọc tin thứ nhất ở bot">
+                    <h3><a href="">Đông Nhi, Will khuấy động lễ trao giải Liên hoan phim Việt Nam</a></h3>
+                    <p>Đông Nhi diện áo dài trình diễn "Cô Ba Sài Gòn", Will hát "Em chưa 18" mang đến không khí trẻ trung cho sự kiện tối 28/11.</p>
+                    <p><span><a href="">Đọc luôn ...</a></span></p>
+                </div>
+                <div class="tin4">
+                    <img src="img/tin45.jpg" alt="đọc tin thứ nhất ở bot">
+                    <h3><a href="">Phim 'Em chưa 18' đoạt Bông Sen Vàng</a></h3>
+                    <p>Sau khi phá kỷ lục phòng vé Việt, tác phẩm của đạo diễn Lê Thanh Sơn tiếp tục được vinh danh ở Liên hoan phim Việt Nam.</p>
+                    <p><span><a href="">Đọc luôn ...</a></span></p>
+                </div>
+            </div>
+
+            <div class="ket">
+                <p class="t1">Page 1/4</p>
+                <p class="t2"><a href="">Còn Nữa....</a></p>
+            </div>
+        </section>
+        <section class="foter">
+            <ul>
+                <li><a href="">Giới thiệu</a></li>
+                <li><a href="">Phim</a></li>
+                <li><a href="">Phòng Vé</a></li>
+                <li><a href="">Thành Viên</a></li>
+                <li><a href="">Tin Tức</a></li>
+                <li><a href="">Ưu Đãi</a></li>
+            </ul>
+            <div class="logo1"><img src="img/logo_rieng.png"></div>
+            <div class="ketnoi">
+                <h3>Kết Nối Với Chúng Tôi</h3>
+                <a href=""><img src="img/fb_icon.JPG"></a>
+                <a href=""><img src="img/youtube_icon.JPG" alt=""></a>
+                <a href=""><img src="img/intagram_icon.JPG" alt=""></a>
+                <a href=""><img src="img/line_icon.JPG" alt=""></a>
+                <a href=""><img src="img/zalo_icon.JPG" alt=""></a>
+                <p><img src="img/bocongthuong.JPG" alt=""></p>
+            </div>
+            <div class="cskh">
+                <h3>Chăm Sóc Khách Hàng</h3>
+                <p>Hotline: 0888888888</p>
+                <p>Giờ làm việc : 8:00-22:00</p>
+                <p>Email hỗ trợ : maidtt@fpt.edu.vn</p>
+            </div>
+            <div class="cskh2">
+                <h3>CÔNG TY TNHH CJ POLY CINEMA</h3>
+                <p>
+                    Giấy CNĐKDN: 0303675393, đăng ký lần đầu ngày 31/7/2008, đăng ký thay đổi lần thứ 5 ngày 14/10/2015, cấp bởi Sở KHĐT thành phố Hà Nộ.<br> Địa Chỉ: Tòa nhà CJ, Tầng 10-11, 2Bis-4-6 đường Lê Thánh Tôn, Quận 1, Thành phố Hà Nội.<br> Hotline: 1900 6017<br>
+                </p>
+            </div>
+        </section>
+    </article>
+
+</body>
+
+</html>

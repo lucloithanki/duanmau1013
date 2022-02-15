@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="">
+<title>Phim Sắp Chiếu</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/phimsapchieu.css">
+    <link rel="stylesheet" href="css/dangki.css">
+</head>
+
+<body>
+    <article id="main">
+        <section class="logo"><a href="index.html"><img src="img/logo.png" width="100%" height="auto"></a></section>
+        <section class="menu">
+            <ul>
+                <li><a href="gioithieu.html">Giới Thiệu</a></li>
+                <li><a href="phimsapchieu.html">Phim</a>
+                    <ul class="list-menu">
+                        <li><a href="phimsapchieu.html">Phim Sắp Chiếu</a></li>
+                        <li><a href="phimdangchieu.html">Phim Đang Chiếu</a></li>
+                        <li><a href="phimdangsale.html">Phim Đang Sale</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Phòng Vé</a></li>
+                <li><a href="thanhvien.html">Thành Viên</a>
+                    <ul class="list-menu">
+                        <li><a href="dangki.html">Đăng Kí</a></li>
+                        <li><a href="dangki.html">Đăng Nhập</a></li>
+                    </ul>
+                </li>
+                <li><a href="tintuc.html">Tin Tức</a></li>
+
+            </ul>
+        </section>
+        <div class="dangki">
+            <p>
+                <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng Nhập</a></p>
+            <p>
+                <a href="#" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Đăng Kí</a></p>
+            <br>
+            <i> Click vào đăng kí or đăng nhập để hệ thống xử lý.</i>
+            <img src="img/direct-login-new.png" alt="">
+            <div id="id01" class="modal">
+
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <button class="btn-btn">Đăng Nhập</button>
+
+                    </div>
+
+                    <div class="container">
+                        <label><b>Tên đăng nhập</b></label>
+                        <input type="text" placeholder="Enter Username" name="name" required>
+
+                        <label><b>Mật Khẩu</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <button type="submit">Login</button>
+                        <input type="checkbox" checked="checked"> >> Nhớ tài khoản.
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Quên mật khẩu <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+            <div id="id02" class="modal">
+
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <button class="btn-btn">Đăng Nhập</button>
+
+                    </div>
+
+                    <div class="container">
+                        <label><b>Tên đăng nhập</b></label>
+                        <input type="text" placeholder="Enter Username" name="name" required>
+                        <label><b>Email</b></label>
+                        <input type="text" placeholder="" name="name" required>
+                        <label><b>Số điện thoại</b></label>
+                        <input type="text" placeholder="" name="name" required>
+                        <label><b>Mật Khẩu</b></label>
+                        <input type="password" placeholder="" name="psw" required>
+                        <label><b>Nhập Lại Mật Khẩu</b></label>
+                        <input type="password" placeholder="" name="psw" required>
+
+                        <button type="submit">Đăng Kí</button>
+                        <input type="checkbox" checked="checked"> >> Sử Dụng Định Vị.
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Có tài khoản đăng nhập <a href="#">password?</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        <section class="clear"></section>
+        <section class="foter">
+            <ul>
+                <li><a href="index.html">Giới Thiệu</a></li>
+                <li><a href="phimdangchieu.html">Phim</a></li>
+                <li><a href="phongve.html">Phòng Vé</a></li>
+                <li><a href="thanhvien.html">Thành Viên</a></li>
+                <li><a href="tintuc.html">Tin Tức</a></li>
+                <li><a href="uudai.html">Ưu Đãi</a></li>
+            </ul>
+            <div class="logo1"><img src="img/logo_rieng.png"></div>
+            <div class="ketnoi">
+                <h3>Kết Nối Với Chúng Tôi</h3>
+                    <a href=""><img src="img/fb_icon.JPG"></a>
+                    <a href=""><img src="img/youtube_icon.JPG" alt=""></a>
+                    <a href=""><img src="img/intagram_icon.JPG" alt=""></a>
+                    <a href=""><img src="img/line_icon.JPG" alt=""></a>
+                    <a href=""><img src="img/zalo_icon.JPG" alt=""></a>
+                    <p><img src="img/bocongthuong.JPG" alt=""></p>
+            </div>
+            <div class="cskh">
+                <h3>Chăm Sóc Khách Hàng</h3>
+                    <p>Hotline: 0888888888</p>
+                    <p>Giờ làm việc : 8:00-22:00</p>
+                    <p>Email hỗ trợ : maidtt@fpt.edu.vn</p>
+            </div>
+            <div class="cskh2">
+                <h3>CÔNG TY TNHH CJ POLY CINEMA</h3>
+                <p>
+                    Giấy CNĐKDN: 0303675393, đăng ký lần đầu ngày 31/7/2008, đăng ký thay đổi lần thứ 5 ngày 14/10/2015, cấp bởi Sở KHĐT thành phố Hà Nộ.<br> Địa Chỉ: Tòa nhà CJ, Tầng 10-11, 2Bis-4-6 đường Lê Thánh Tôn, Quận 1, Thành phố Hà Nội.<br> Hotline: 1900 6017<br>
+                </p>
+            </div>
+        </section>
+    </article>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+*{ box-sizing: border-box; font-family: Tahoma, sans-serif; font-size: 100%;}
+.wraper{
+	width: 1200px;
+	margin: auto;
+}
+#tv-content{
+	height: 1300px;
+	background: ;
+}
+.tv-banner{
+	width: 1200px;
+	height: 255px;
+	margin-top: 30px;
+}
+.tv-tv{
+	height: auto;
+	background: #f9f3ff;
+}
+.tv-top{
+	width: 760px;
+	height: 235px;
+	background: ;
+	float: right;
+	margin-top: 30px;
+	padding: 20px;
+}
+.tv-btn{
+	font-size: 20px;
+	width: 200px;
+	height: 90px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	background: white;
+	border-radius: 9px;
+}
+.tv-btn:hover{
+	background:#f7941d !important; 
+}
+.active{background:#f7941d !important; }
+
+.tv-btn4{
+	width: 200px;
+	height: 90px;
+	/*margin: 10px;*/
+	font-size: 20px;
+	margin-left: 150px;
+	background: white;
+	border-radius: 9px;
+}
+.tv-btn5{
+	width: 200px;
+	height: 90px;
+	font-size: 20px;
+	margin-left: 30px;
+	background: white;
+	border-radius: 9px;
+}
+.tv-left{
+	width: 557px;
+	height: 638px;
+	float: left;
+}
+.tv-right{
+	width: 592px;
+	height: 720px;
+	float: left;
+	background-image: url(../images/tv-khung.png)
+}
+.tv-right-title{
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: 600;
+	margin-left: 40px;
+}
+.tv-thongtin{
+	width: 530px;
+	height: 600px;
+	background: white;
+	margin-left: 32px;
+	font-size: 16px;
+	padding:10px;
+	line-height: 28px;
+}
